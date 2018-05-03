@@ -1,0 +1,26 @@
+Form daftar
+-USERNAME \ Text
+-NAMA \ Text
+-PASSWORD \ Password
+-Konfirmasi Password \ Password
+-ALAMAT \ Text tapi besar
+-TANGGAL LAHIR \ make kalender component
+
+Login
+-USERNAME
+-PASSWORD
+
+Tambah buku
+-ISBN / NUMBER
+-JUDUL buku / TEXT
+-PENGARANG /TEXT`
+-PENERBIT / COMBO
+-JENIS / COMBO
+-TAHUN TERBIT / COMBO
+
+Edit buku buku
+-JUDUL buku / TEXT
+-PENGARANG /TEXT`
+-PENERBIT / COMBO
+-JENIS / COMBO
+-TAHUN TERBIT / COMBO
