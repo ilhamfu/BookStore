@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> LOGIN </title>
+        <title> SIGN UP </title>
     </head>
     
     <body>
@@ -20,7 +20,7 @@
            
      
 
-<input type="submit" value="LOGIN" >
+                <input type="submit" value="SIGN UP" >
         </form>
     </body>
 </html>
