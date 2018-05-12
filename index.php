@@ -1,6 +1,7 @@
 <?php
   include 'koneksi.php';
-  $query = mysqli_query($conn,"select * from vwBuku");
+  $sql = "SELECT * FROM vwBuku";
+  $result = mysqli_query($conn,$sql);
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +14,7 @@
 </head>
 <body>
   
-  <table>
+  <table border='1'>
     <tr>
       <td>No</td>
       <td>ISBN</td>
@@ -25,10 +26,11 @@
     </tr>
     <?php 
       $no=1;
-      while($data = mysqli_fetch_array($query)){
+      while($data = mysqli_fetch_assoc($result)){
     ?>
     <tr>
       <td><?=$no++?></td>
+      <td><?=$data['isbn']?></td>
       <td><a href="#"><?=$data['judul']?></a></td>
       <td><?=$data['pengarang']?></td>
       <td><?=$data['nama_instansi']?></td>
