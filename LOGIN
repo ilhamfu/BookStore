@@ -1,0 +1,20 @@
+
+<html>
+    <head>
+        <title>LOGIN</title>
+    </head>
+
+    <body>
+        
+            <h1><center>TOKO BUKU KITA</center></h1>
+            <h3><center>"Baca Buku Menambah Ilmu"</center></h3>
+
+            <form>
+            <center> <input type="text" placeholder="USERNAME"> </center><br>
+            <center> <input type="password" placeholder="PASSWORD"/> </center><br>
+           <center> <input class="btn" type="submit" value="LOGIN"/> </center>
+            </form>
+        
+    </body>
+
+</html>
