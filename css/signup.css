@@ -4,6 +4,7 @@ body{
    -moz-background-size: 100% 100%;
    -o-background-size: 100% 100%;
     background-size: 100% 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 form{
 	background-color:#e5e1da;
@@ -37,4 +38,8 @@ input{
 }
 h2{
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+textarea{
+  border:1px solid #d8b66c;
+  border-radius:5px;
 }
