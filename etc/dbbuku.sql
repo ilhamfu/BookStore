@@ -22,11 +22,7 @@ create table tbPenerbit(
 create table tblLogin(
     username varchar(20) primary key,
     password varchar(100) not null,
-    status enum('USER','ADMIN') not null
-);
-
-create table tblUser(
-    id_login int PRIMARY KEY,
+    status enum('USER','ADMIN') not null,
     nama_depan VARCHAR(20) not NULL,
     nama_belakang VARCHAR(20) not NULL,
     alamat VARCHAR(100) not NULL,
