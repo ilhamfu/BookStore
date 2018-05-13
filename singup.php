@@ -18,6 +18,7 @@
             header("location:/bookstore/BookStore");
             $_SESSION["username"]=$username;
             $_SESSION["status"]="USER";
+            $_SESSION["isPinjam"]=FALSE;
         }else{
             if (mysqli_error($conn)=="Duplicate entry '$username' for key 'PRIMARY'"){
             ?>

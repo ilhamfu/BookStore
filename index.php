@@ -4,8 +4,13 @@
   $sql = "SELECT * FROM vwBuku";
   $result = mysqli_query($conn,$sql);
   $isadmin=false;
-  if (isset($_SESSION["status"]) and ($_SESSION["status"]=="ADMIN")){
-    $isadmin=true;
+  $isuser=false;
+  if (isset($_SESSION["status"])){
+    if ($_SESSION["status"]=="ADMIN"){
+      $isadmin=true;
+    }elseif ($_SESSION["status"]=="USER")  {
+      $isuser=true;
+    }
   }
 ?>
 
@@ -45,6 +50,13 @@
       <?php
         }
       ?>
+      <?php
+        if ($isuser){
+      ?>
+      <td>Pinjam</td>
+      <?php
+        }
+      ?>
     </tr>
     <?php 
       $no=1;
@@ -57,12 +69,19 @@
       <td><?=$data['pengarang']?></td>
       <td><?=$data['nama_instansi']?></td>
       <td><?=$data['tahun_terbit']?></td>
-      <td><?=($data['jumlah']>0)?'Yes':'No'?></td>
+      <td><?=($data['jumlah'])?'Yes':'No'?></td>
       <?php
         if ($isadmin){
       ?>
       <td><a href="">edit</a></td>
       <td><a href="">hapus</a></td>
+      <?php
+        }
+      ?>
+      <?php
+        if ($isuser){
+      ?>
+        <td>Pinjam</td>
       <?php
         }
       ?>

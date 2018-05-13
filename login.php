@@ -13,6 +13,7 @@
         if($rows==1){
             $_SESSION['username']= $username;
             $_SESSION['status']= $data[2];
+            $_SESSION["isPinjam"]=$data[9];
             header("location:/bookstore/BookStore/");
         }
         else{

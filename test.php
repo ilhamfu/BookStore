@@ -1,5 +1,5 @@
 <?php
-    $s=100;
+    $s=1;
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +11,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?=($s>100)?'tersedia':'kosong'?>
+    <?=($s)?'tersedia':'kosong'?>
 </body>
 </html>
