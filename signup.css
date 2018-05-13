@@ -1,0 +1,40 @@
+body{
+  background: url('bg-login.jpg') no-repeat fixed;
+   -webkit-background-size: 100% 100%;
+   -moz-background-size: 100% 100%;
+   -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+form{
+	background-color:#e5e1da;
+	width:250px;
+	padding-left: 30px;
+  padding-top:2px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+	border-radius:10px;
+	margin:5px auto;
+}
+input{
+	display:block;
+	box-sizing:border-box;
+	border:1px solid #d8b66c;
+	padding:15px;
+	width:100%;
+	background-color:#efefef;
+	border-radius:5px;
+	margin-bottom:0px;
+}
+.btn{
+	background:#d8b66c;
+	border-radius:5px;
+	color:#ffffff;
+	text-align:none;
+
+}
+.transparan2{
+  background:rgba(0,0,0,0.4);
+}
+h2{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
