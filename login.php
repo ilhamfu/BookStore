@@ -39,10 +39,12 @@
             <h3><center>"Baca Buku Menambah Ilmu"</center></h3>
 
             <form method="POST" action="">
-                <center> <input type="text" placeholder="username" name="username"> </center><br>
-                <center> <input type="password" placeholder="password" name="password"/> </center><br>
-                <center> <input type="submit" value="LOGIN"/></center>
+                <input type="text" placeholder="username" name="username">
+                <input type="password" placeholder="password" name="password"/>
+                <input type="submit" value="LOGIN"/></center>
+                <center> <a href="singup.php">Belum ada akun? Sing Up</a> </center>
             </form>
+            
         
     </body>
 

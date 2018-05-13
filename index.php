@@ -20,40 +20,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/index.css">
+  <title>Perpustakan Kita</title>
 </head>
 <body>
-  <?php
-    if (!(isset($_SESSION["username"]))){
-  ?>
-    <div><a href="login.php">Login</a></div>
-  <?php
-    }else{
-  ?>
-    <div><a href="logout.php">Logout <?=$_SESSION["status"]?></a></div>
-  <?php
-    };
-  ?>
-  <table border='1'>
-    <tr>
-      <td>No</td>
-      <td>ISBN</td>
-      <td>Judul</td>
-      <td>Pengarang</td>
-      <td>Penerbit</td>
-      <td>Tahun Terbit</td>
-      <td>Tersedia</td>
+
+  <h1 align="center">Perpustakan Kita</h1>
+  <div class="top-nav">
+    <?php
+      if (!(isset($_SESSION["username"]))){
+    ?> 
+      <a href="login.php">Login</a>
+    <?php
+      }else{
+    ?>
+      <a href="logout.php">Logout <?=$_SESSION["status"]?></a>
+    <?php
+      };
+    ?>
+  </div>
+  <table>
+    <tr class="header">
+      <td class="column">No</td>
+      <td class="column">ISBN</td>
+      <td class="column">Judul</td>
+      <td class="column">Pengarang</td>
+      <td class="column">Penerbit</td>
+      <td class="column">Tahun Terbit</td>
+      <td class="column">Tersedia</td>
       <?php
         if ($isadmin){
       ?>
-      <td colspan="2">Edit/Hapus</td>
+      <td class="column" colspan="2">Edit/Hapus</td>
       <?php
         }
       ?>
       <?php
         if ($isuser){
       ?>
-      <td>Pinjam</td>
+      <td class="column">Pinjam</td>
       <?php
         }
       ?>
@@ -89,5 +94,5 @@
     <?php } ?>
   </table>
 
-</body>
+  </body>
 </html>

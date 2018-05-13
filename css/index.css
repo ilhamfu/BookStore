@@ -1,0 +1,20 @@
+body    {
+    background: #6069e4;
+    height :100%;
+}
+
+table {
+    background-color: #f0f0f0;
+    width:1300px;
+    padding:30px;
+    border-radius: 20px;
+    margin: 5px auto;
+}
+
+.header{
+    text-align: center;
+}
+
+.column{
+    border-bottom: 3px solid black;
+}

@@ -1,5 +1,5 @@
 body{
-  background: url('bg-login.jpg') no-repeat fixed;
+  background: url('../img/bg-login.jpg') no-repeat fixed;
    -webkit-background-size: 100% 100%;
    -moz-background-size: 100% 100%;
    -o-background-size: 100% 100%;
@@ -7,9 +7,9 @@ body{
 }
 form{
 	background-color:#e5e1da;
-	width:250px;
+	width:400px;
 	padding-left: 30px;
-  padding-top:2px;
+  padding-top:30px;
   padding-right: 30px;
   padding-bottom: 30px;
 	border-radius:10px;
