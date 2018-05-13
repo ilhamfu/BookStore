@@ -30,6 +30,7 @@
 <html>
     <head>
         <title>LOGIN</title>
+        <link rel="stylesheet" href="css/login.css">
     </head>
 
     <body>
