@@ -3,6 +3,10 @@
   session_start();
   $sql = "SELECT * FROM vwBuku";
   $result = mysqli_query($conn,$sql);
+  $isadmin=false;
+  if (isset($_SESSION["status"]) and ($_SESSION["status"]=="ADMIN")){
+    $isadmin=true;
+  }
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +38,13 @@
       <td>Penerbit</td>
       <td>Tahun Terbit</td>
       <td>Tersedia</td>
+      <?php
+        if ($isadmin){
+      ?>
+      <td colspan="2">Edit/Hapus</td>
+      <?php
+        }
+      ?>
     </tr>
     <?php 
       $no=1;
@@ -47,6 +58,14 @@
       <td><?=$data['nama_instansi']?></td>
       <td><?=$data['tahun_terbit']?></td>
       <td><?=($data['jumlah']>0)?'Yes':'No'?></td>
+      <?php
+        if ($isadmin){
+      ?>
+      <td><a href="">edit</a></td>
+      <td><a href="">hapus</a></td>
+      <?php
+        }
+      ?>
     </tr>
     <?php } ?>
   </table>

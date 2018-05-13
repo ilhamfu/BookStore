@@ -13,10 +13,14 @@
     if($rows==1){
         $_SESSION['username']= $username;
         $_SESSION['status']= $data[2];
-        header("location:index.php");
+        header("location:/bookstore/BookStore/");
     }
-        else{
-            echo "Username atau Password salah";
+    else{
+?>
+        <script language="javascript">
+            alert("gagal login")
+        </script>
+<?php
     }
 
 ?>

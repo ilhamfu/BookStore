@@ -17,9 +17,6 @@
                 </textarea> <br>
            Tanggal Lahir        :
                 <input type="date" name="tanggal lahir" max="2001-12-31"><br>
-           
-     
-
                 <input type="submit" value="SIGN UP" >
         </form>
     </body>
