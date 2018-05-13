@@ -1,12 +1,45 @@
+<?php
+    include "koneksi.php";
+    session_start();
+    $try = ($_SERVER["REQUEST_METHOD"]=="POST")?TRUE:FALSE;
+    if ($_SERVER["REQUEST_METHOD"]=="POST"){
+        $username = $_POST["username"];
+        $password = md5($_POST["password"]);
+        $namad = $_POST["namad"];
+        $namab = $_POST["namab"];
+        $alamat = $_POST["alamat"];
+        $jkelamin = ($_POST["jkelamin"]=="l")?"laki":"perempuan";
+        $tgl_lahir = $_POST["tgl_lahir"];
+        $email = $_POST["email"];
+
+        $sql = "insert into tblLogin values('$username','$password','USER','$namad','$namab','$alamat','$jkelamin','$tgl_lahir','$email')";
+        $hasil = mysqli_query($conn,$sql);
+        if ($hasil){
+            header("location:/bookstore/BookStore");
+            $_SESSION["username"]=$username;
+            $_SESSION["status"]="USER";
+        }else{
+            if (mysqli_error($conn)=="Duplicate entry '$username' for key 'PRIMARY'"){
+            ?>
+                <script type="text/javascript">
+                alert("Username sudah ada")
+                </script>
+            <?php
+                
+            };
+        }
+    }
+?>
 <!DOCTYPE html>
+
 <html>
     <head>
         <title> SIGN UP </title>
     </head>
     
     <body>
-        <form id="userform" method="post" action="proses_daftar.php">
-            Username: <input type="text" name="username" placeholder="Username" required="required"/><br>
+        <form id="userform" method="post" action="">
+            Username: <input type="text" name="username" placeholder="Username" required="required"><br>
             Nama Depan: <input type="text" name="namad" placeholder="Masukkan Nama Depan" required="required"/> <br>
             Nama Belakang: <input type="text" name="namab" placeholder="Masukkan Nama Belakang" required="required"/> <br>
             Password: <input type="password" name="password" required="required"/> <br>
