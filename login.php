@@ -41,7 +41,7 @@
             <form method="POST" action="">
                 <input type="text" placeholder="username" name="username">
                 <input type="password" placeholder="password" name="password"/>
-                <input type="submit" value="LOGIN"/></center>
+                <input class="btn" type="submit" value="LOGIN"/></center>
                 <center> <a href="singup.php">Belum ada akun? Sing Up</a> </center>
             </form>
             

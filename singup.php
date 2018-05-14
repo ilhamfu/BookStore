@@ -50,7 +50,7 @@
             Alamat:<textarea name="alamat" form="userform" required="required"></textarea><br>
             Tanggal Lahir:<input type="date" name="tgl_lahir" max="2100-12-31" required="required"><br>
             Email: <input type="email" name="email" id="" placeholder="example@example.com" required="required"><br>
-            <input type="submit" value="SIGN UP" >
+            <input class="btn" type="submit" value="SIGN UP" >
             <div class="link-login"><a href="login.php">Sudah punya akun? Log In</a></div>
         </form>
     </body>

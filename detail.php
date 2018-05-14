@@ -16,14 +16,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/detail.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
-    <h1><?=$data[1]?></h1>
-    <table border="1">
+    <center><h1><?=$data[1]?></h1>
+    <table border="0">
         <tr height="10px">
             <td rowspan="6"><img src="img/bookcover/<?=$data[0]?>.jpg" alt="" width="411" height="600"></td>
             <td>ISBN</td>
