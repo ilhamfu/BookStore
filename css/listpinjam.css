@@ -1,0 +1,58 @@
+body{
+    background: url('../img/bg-login.jpg') no-repeat fixed;
+     -webkit-background-size: 100% 100%;
+     -moz-background-size: 100% 100%;
+     -o-background-size: 100% 100%;
+      background-size: 100% 100%;
+}
+
+table {
+
+    border : #d8b66c solid 3px;
+    background: wheat;
+    border-radius: 
+    width:1300px;
+    padding:30px;
+    margin: 5px auto;
+}
+
+
+.column{
+    border-bottom: 3px solid black;
+}
+
+h1 {
+    color: wheat;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: wheat;
+}
+
+li{
+    border-right: 1px solid #bbb;;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background: black;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: wheat;
+    color:white;
+}
+
+a{
+    color:#cc8743;
+}

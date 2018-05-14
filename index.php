@@ -25,9 +25,10 @@
 </head>
 <body>
 
-  <a href="/bookstore/BookStore"><h1 align="center">TOKO BUKU KITA</h1></a>
+  <a href="/bookstore/BookStore"><h1 align="center">PERPUSTAKAAN KITA</h1></a>
   
   <ul>
+    <li style="float:left"><a href="/bookstore/BookStore">Home</a></li>
     <li>
       <?php
         if (!(isset($_SESSION["username"]))){
@@ -37,12 +38,19 @@
       <?php
         }else{
       ?>
+        <?php
+        if ($isuser){
+        ?>
+        <a href="listpinjam.php" style="float:left;">Daftar Buku</a>
+        <?php
+        };
+        ?>
         <a href="logout.php" style="float:right;">Logout</a>
       <?php
         };
       ?>
     </li>
-    <li style="float:left"><a href="/bookstore/BookStore">Home</a></li>
+    
   </ul>
 
   <table>
