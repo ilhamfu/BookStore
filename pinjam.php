@@ -24,6 +24,8 @@
         if (!$result){
             echo "anda sudah memesan buku ini";
         }else{
+            $sql = "update tbBuku set jumlah=jumlah-1 where isbn='$isbn'";
+            mysqli_query($conn,$sql);
             header("location:/bookstore/BookStore");
         }
     }
