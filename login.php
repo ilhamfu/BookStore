@@ -35,7 +35,7 @@
 
     <body>
         
-            <h1><center>TOKO BUKU KITA</center></h1>
+            <a href="/bookstore/BookStore"><h1 align="center">TOKO BUKU KITA</h1></a>
             <h3><center>"Baca Buku Menambah Ilmu"</center></h3>
 
             <form method="POST" action="">

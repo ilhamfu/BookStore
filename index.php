@@ -25,20 +25,26 @@
 </head>
 <body>
 
-  <h1 align="center">Perpustakan Kita</h1>
-  <div class="top-nav">
-    <?php
-      if (!(isset($_SESSION["username"]))){
-    ?> 
-      <a href="login.php">Login</a>
-    <?php
-      }else{
-    ?>
-      <a href="logout.php">Logout <?=$_SESSION["status"]?></a>
-    <?php
-      };
-    ?>
-  </div>
+  <a href="/bookstore/BookStore"><h1 align="center">TOKO BUKU KITA</h1></a>
+  
+  <ul>
+    <li>
+      <?php
+        if (!(isset($_SESSION["username"]))){
+      ?>
+        <a href="login.php" style="float:right;">Login</a>
+        <a href="singup.php" style="float:right;">Daftar</a> 
+      <?php
+        }else{
+      ?>
+        <a href="logout.php" style="float:right;">Logout</a>
+      <?php
+        };
+      ?>
+    </li>
+    <li style="float:left"><a href="/bookstore/BookStore">Home</a></li>
+  </ul>
+
   <table>
     <tr class="header">
       <td class="column">No</td>
@@ -86,7 +92,17 @@
       <?php
         if ($isuser){
       ?>
-        <td>Pinjam</td>
+        <?php
+          if ($data["jumlah"]){
+        ?>
+          <td><a href="pinjam.php?isbn=<?=$data["isbn"]?>">Pinjam</a></td>
+        <?php
+          }else{
+        ?>
+          <td>Kosong</td>
+        <?php
+          }
+        ?>
       <?php
         }
       ?>
